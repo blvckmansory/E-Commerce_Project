@@ -11,7 +11,7 @@ class Customer(models.Model): # customer model with one-to-one relationship
 
 class Product(models.Model):
     name = models.CharField(max_length=200)
-    price = models.FloatField()
+    price = models.DecimalField(max_digits=7, decimal_places=2)
     digital = models.BooleanField(default=False,null=True, blank=True) # if it is digital - we don't need to ship it
     image = models.ImageField(null=True, blank=True)
 
